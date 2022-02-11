@@ -1,0 +1,78 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("liblogo.jpg");
+
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    
+}
+
+.calculator-grid > button {
+      cursor: pointer;
+      font-size: 2rem;
+      border: 1px, solid #FFFFFF;
+      outline: none;
+      background-color: rbga(255, 255, 255, 0.75);     border-radius: 10px;
+
+}
+
+.calculator-grid > button:hover {
+        background-color: #a9a9a9;
+}
+
+.span-two {
+        grid-column: span 2;
+        color: #adf802;
+        background-color: rgba(88, 86, 88, 0.8);
+}
+.span-two2 {
+        grid-column: span 2;
+        color: black;
+        background-color: greenyellow; margin: 10px 0 auto 110px; opacity: 0.8;
+}
+
+.output{
+        grid-column: 1 / -1;
+        background-color: rgba(0, 0, 0, 0.75);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px;
+        word-wrap: break-word;
+        word-break: break-all;     border-radius: 20px; margin: auto; 
+
+}
+.output .previous-operand{
+        color: white;
+        font-size: 1.5rem; 
+}
+
+.output .current-operand{
+        color: white;
+        font-size: 2.5rem;
+}
+
+/*--------------------------------------edit from cal2 css-------------------------------------------*/
+
+button {
+    width: 100px; 
+    height: 70px;
+    margin: 10px;
+    opacity: 1;
+    justify-content: center;
+}
