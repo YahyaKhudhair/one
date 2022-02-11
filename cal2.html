@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Calculator2</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link href="cal2.css" rel="stylesheet">
+    <script src="cal2.js" defer></script>
+</head>
+
+<body>
+  <div id="container">
+     <input type="text" id="p1" value="6">
+     <input type="text" id="p2" value="3">
+     <br><br>
+     <button  onclick="add()">Add</button>
+     <button  onclick="sub()">Subtract</button>
+     <button  onclick="mul()">Multiply</button>
+     <button  onclick="div()">Divide</button>
+     <br><br>
+     <span  id="sum">result : </span>
+  </div>
+  <script>
+    let n1 = parseFloat(document.getElementById('p1').value);
+      let n2 = parseFloat(document.getElementById('p2').value);
+      let s = document.getElementById('sum');
+
+      function add() {
+        let x = n1 + n2
+        document.getElementById("sum").textContent = "result :" + x
+      }
+      function sub() {
+        let x = n1 - n2
+        document.getElementById('sum').textContent = "result :" + x
+      }
+      function mul() {
+        let x = n1 * n2
+        document.getElementById('sum').textContent = "result :" + x
+      }
+      function div() {
+        let x = n1 / n2
+        document.getElementById('sum').textContent = "result :" + x
+      }
+  </script>
+</body>
+</html>
