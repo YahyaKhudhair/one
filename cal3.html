@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Calculator3</title>
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <meta charset="windows-1252">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="cal3.css" rel="stylesheet">
+    <script src="cal3.js" defer></script>
+
+    <script>
+        function calc() {
+            var n1 = parseFloat(document.getElementById('n1').value);
+            var n2 = parseFloat(document.getElementById('n2').value);
+            var oper = document.getElementById('operators').value;
+
+            if (oper === '+') {
+                document.getElementById('result').value = n1 + n2;
+            }
+            if (oper === '-') {
+                document.getElementById('result').value = n1 - n2;
+            }
+            if (oper === '/') {
+                document.getElementById('result').value = n1 / n2;
+            }
+            if (oper === 'X') {
+                document.getElementById('result').value = n1 * n2;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="x" >
+        <br><br>
+      <span><input type="text" value="6" id="n1" /></span><br /><br />
+      <span><input type="text" value="3" id="n2" /></span><br /><br />
+      <br><br>
+      <select id="operators">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="/">/</option>
+          <option value="X">*</option>
+      </select>
+      <button  onclick="calc();">=</button>
+      <br><br><br>
+      <input type="text" id="result" />
+   </div>
+</body>
+
+</html>
